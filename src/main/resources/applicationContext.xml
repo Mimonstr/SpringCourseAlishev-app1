@@ -14,6 +14,8 @@
     <bean id = "musicPlayerBean"
           class="com.paryshkin.SpringCourseAlishev.MusicPlayer">
         <property name="music" ref="musicBean"/>
+        <property name="name" value="Some name"/>
+        <property name="volume" value="333"/>
     </bean>
 
 

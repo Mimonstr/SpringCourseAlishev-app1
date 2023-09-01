@@ -13,5 +13,6 @@ public class TestSpring
         System.out.println(musicPlayer.getVolume());
         System.out.println(musicPlayer.getName());
         context.close();
+        //End with xml file далее анатации
     }
 }

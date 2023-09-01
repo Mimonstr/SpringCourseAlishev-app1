@@ -1,5 +1,8 @@
 package com.paryshkin.SpringCourseAlishev;
 
+import org.springframework.stereotype.Component;
+
+
 public class MusicPlayer
 {
     private Music music;

@@ -6,13 +6,13 @@ import org.springframework.stereotype.Component;
 @Component
 public class MusicPlayer
 {
-    private ClassicalMusic classicalMusic;
+    private Music music;
 
     //IoC
     @Autowired
-    public MusicPlayer(ClassicalMusic classicalMusic)
+    public MusicPlayer(Music music)
     {
-        this.classicalMusic = classicalMusic;
+        this.music = music;
     }
     public MusicPlayer(){}
 
@@ -23,6 +23,6 @@ public class MusicPlayer
 
     public void playMusic()
     {
-        System.out.println("Playing: " + classicalMusic.getSong());
+        System.out.println("Playing: " + music.getSong());
     }
 }

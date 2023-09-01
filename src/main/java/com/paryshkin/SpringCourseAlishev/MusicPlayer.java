@@ -7,10 +7,15 @@ import org.springframework.stereotype.Component;
 @Component
 public class MusicPlayer
 {
-    @Autowired
-    @Qualifier("classicalMusic")
-   private Music music;
+   private Music music1;
+   private Music music2;
 
+    @Autowired
+    public MusicPlayer(@Qualifier("classicalMusic") Music music1, @Qualifier("rockMusic") Music music2)
+    {
+        this.music1 = music1;
+        this.music2 = music2;
+    }
     //IoC
 
 
@@ -19,6 +24,6 @@ public class MusicPlayer
 
     public String playMusic()
     {
-        return "Playing: " + music.getSong();
+        return "Playing: " + music1.getSong() + ", " + music2.getSong();
     }
 }

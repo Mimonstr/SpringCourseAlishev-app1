@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class MusicPlayer
 {
+
     @Value("${musicPlayer.name}")
     private String name;
     @Value("${musicPlayer.volume}")

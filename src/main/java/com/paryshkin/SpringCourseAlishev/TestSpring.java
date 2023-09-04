@@ -26,6 +26,10 @@ public class TestSpring
         System.out.println(musicPlayer.getName());
         System.out.println(musicPlayer.getVolume());
 
+        ClassicalMusic classicalMusic1 = context.getBean("classicalMusic", ClassicalMusic.class);
+        ClassicalMusic classicalMusic2 = context.getBean("classicalMusic", ClassicalMusic.class);
+        System.out.println("Объекты равны? : " + (classicalMusic1 == classicalMusic2));
+
         context.close();
 
     }
